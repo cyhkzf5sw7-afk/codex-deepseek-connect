@@ -1,0 +1,105 @@
+{
+  "models": [
+    {
+      "slug": "deepseek-flash",
+      "display_name": "DeepSeek-Flash",
+      "description": "DeepSeek model for Codex.",
+      "default_reasoning_level": "high",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Lower reasoning effort"
+        },
+        {
+          "effort": "high",
+          "description": "High reasoning effort"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning effort"
+        }
+      ],
+      "shell_type": "shell_command",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 1,
+      "availability_nux": null,
+      "upgrade": null,
+      "base_instructions": "You are Codex, an AI assistant. Follow the user instructions and use available tools when appropriate.",
+      "default_reasoning_summary": "none",
+      "support_verbosity": true,
+      "default_verbosity": "low",
+      "apply_patch_tool_type": "freeform",
+      "web_search_tool_type": "text",
+      "truncation_policy": {
+        "mode": "tokens",
+        "limit": 10000
+      },
+      "supports_image_detail_original": true,
+      "context_window": 1048576,
+      "max_context_window": 1048576,
+      "effective_context_window_percent": 95,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "supports_search_tool": false,
+      "use_responses_lite": false,
+      "experimental_supported_tools": [],
+      "tool_mode": null,
+      "multi_agent_version": "v2",
+      "comp_hash": "3000",
+      "supports_reasoning_summaries": false
+    },
+    {
+      "slug": "deepseek-v4-pro",
+      "display_name": "DeepSeek-V4-Pro",
+      "description": "DeepSeek model for Codex.",
+      "default_reasoning_level": "high",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Lower reasoning effort"
+        },
+        {
+          "effort": "high",
+          "description": "High reasoning effort"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning effort"
+        }
+      ],
+      "shell_type": "shell_command",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 2,
+      "availability_nux": null,
+      "upgrade": null,
+      "base_instructions": "You are Codex, an AI assistant. Follow the user instructions and use available tools when appropriate.",
+      "default_reasoning_summary": "none",
+      "support_verbosity": true,
+      "default_verbosity": "low",
+      "apply_patch_tool_type": "freeform",
+      "web_search_tool_type": "text",
+      "truncation_policy": {
+        "mode": "tokens",
+        "limit": 10000
+      },
+      "supports_image_detail_original": false,
+      "context_window": 1048576,
+      "max_context_window": 1048576,
+      "effective_context_window_percent": 95,
+      "input_modalities": [
+        "text"
+      ],
+      "supports_search_tool": false,
+      "use_responses_lite": false,
+      "experimental_supported_tools": [],
+      "tool_mode": null,
+      "multi_agent_version": "v2",
+      "comp_hash": "3000",
+      "supports_reasoning_summaries": false
+    }
+  ]
+}

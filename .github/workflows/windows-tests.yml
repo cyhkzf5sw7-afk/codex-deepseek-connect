@@ -1,4 +1,4 @@
-name: Windows tests
+name: Windows and macOS tests
 
 on:
   push:
@@ -10,15 +10,23 @@ permissions:
 
 jobs:
   tests:
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.9', '3.12']
+        include:
+          - os: windows-latest
+            python-version: '3.9'
+          - os: windows-latest
+            python-version: '3.12'
+          - os: macos-latest
+            python-version: '3.12'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Run tests, including temporary Windows credential integration
+      - name: Run tests
         run: python -B -m unittest -v test_setup
+      - name: Build Windows and macOS packages in both languages
+        run: python -B build_packages.py --output dist
