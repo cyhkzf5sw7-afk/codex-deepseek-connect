@@ -1,4 +1,4 @@
-ef008a0206f4fa4702a63a9c4925b8c9a299ee4dad72c64ca1aa6389cd4bdd56  Codex-DeepSeek-Windows-zh-CN.zip
-44b62b4866361a871a629af7b61ee52d785358ff32c87d845a1b39d66ba291f0  Codex-DeepSeek-Windows-en.zip
-741d76baa46585395ca8d0dac50a43a26e14b756a5a3843f513c11149118b49a  Codex-DeepSeek-macOS-zh-CN.zip
-51b91a1fd960e4113b86ec67f7605e5e842d4786e552cfa74355cd20f5376219  Codex-DeepSeek-macOS-en.zip
+180b4687d7344b7ccbb1840b73db2d8e337d31fb4339f48553b4bba3e84bc460  Codex-DeepSeek-Windows-zh-CN.zip
+7926947a31062ac1b890c706a0c3b76645170ec64b81600b612de1a0188139e2  Codex-DeepSeek-Windows-en.zip
+745bfb483916c4a8ff8ecd80cf6854f0749023e6eb530cc659067d824ed549fc  Codex-DeepSeek-macOS-zh-CN.zip
+779889b14603223ac77f96411ce325696ad7b86b4dcc8059a76b7d9fa5aef99d  Codex-DeepSeek-macOS-en.zip

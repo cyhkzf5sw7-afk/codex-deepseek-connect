@@ -237,7 +237,7 @@ class SetupTests(unittest.TestCase):
         buffer = io.BytesIO()
         stream = io.TextIOWrapper(buffer, encoding="cp1252", errors="strict", write_through=True)
         setup.safe_print("完成: café", file=stream)
-        self.assertEqual(buffer.getvalue(), b"\\u5b8c\\u6210: caf\xe9\n")
+        self.assertEqual(buffer.getvalue().replace(b"\r\n", b"\n"), b"\\u5b8c\\u6210: caf\xe9\n")
         with mock.patch.object(setup.sys, "stderr", stream), mock.patch.object(setup.getpass, "getpass", return_value="sk-fake") as prompt:
             self.assertEqual(setup.prompt_key(), "sk-fake")
         self.assertTrue(prompt.call_args.args[0].isascii())
@@ -247,7 +247,7 @@ class SetupTests(unittest.TestCase):
         buffer = io.BytesIO()
         stream = io.TextIOWrapper(buffer, encoding="utf-8", errors="strict", write_through=True)
         setup.safe_print("完成", file=stream)
-        self.assertEqual(buffer.getvalue().decode("utf-8"), "完成\n")
+        self.assertEqual(buffer.getvalue().decode("utf-8").replace("\r\n", "\n"), "完成\n")
 
     def test_non_hidden_input_is_rejected(self):
         setup.init_home(self.home)
